@@ -42,11 +42,32 @@ def q1():
 #   Caso o valor somado seja maior que 20, este deverá ser apresentado
 #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
 #   20, este deverá ser apresentado subtraindo-se 5.
+# Leitura dos dois valores inteiros
+def q2():
+     num1=int(input("Digite um numero inteiro: "))
+     num2=int(input("Digite outro numero inteiro: "))
+     adc=(num1+num2)
+     if(adc > 20):
+         print(f'{adc} + 8 = {adc+8}')
+     elif(adc <= 20):
+         print(f'{adc} - 5 = {adc-5}')
 
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
-
+def q3():
+     num=int(input('Insira um número: '))
+     if ((num%3)==0):
+         print(f'{num} é múltiplo de 3.')
+     else:
+         print(f'{num} não é múltiplo de 3.')
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
+def q4():
+     num=int(input('Insira um número: '))
+     if ((num%5)==0):
+         print(f'{num} é divisível por 5.')
+     else:
+         print(f'{num} não é divisível por 5.')
+ 
 
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
 def q5():
@@ -60,12 +81,35 @@ def q5():
 #   estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
 #   bruto. Faça um programa que permita entrar com o salário bruto
 #   e o valor da prestação e informar se o empréstimo pode ou não ser concedido.
+f q6():
+     salario = round(float(input("Insira o salário bruto: R$")),2)
+     prestaçao = round(float(input('Insira o valor da prestação: R$')),2)
+     percent = (prestaçao*100)/salario
+     if (percent > 30):
+         print(f'Valor superior a 30% do salario bruto. O impréstimo não pode ser concedido.')
+     else:
+         print('Impréstimo autorizado.')    
 
 #7. Faça um programa que leia um número e indique se o número está compreendido
 #   entre 20 e 50 ou não.
+7():
+     num = int(input('Insira um número: '))
+     if (20 <= num <= 50):
+         print(f'{num} está entre 20 e 50.')
+     else:
+         print(f'{num} não está entre 20 e 50.')
+ 
 
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
+def q8():
+     num = int(input('Insira um número: '))
+     if (num < 20):
+         print(f'{num} é menor que 20.')
+     elif (num == 20):
+         print(f'{num} é igual a 20.')
+     elif (num > 20):
+         print (f'{num} é maior que 20.')
 
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
@@ -115,12 +159,32 @@ def q11():
 #• Se é maior de idade
 #• Se é menor de idade
 #• Se é maior de 65 anos
+def q12():
+     idade = int(input("Qual é a idade? "))
+     if (65 >= idade >= 18):
+         print(f'É maior.')
+     elif (idade < 18):
+         print(f'É menor.')
+     elif (idade > 65):
+         print('É maior de 65.')
+ 
 
 #13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota
 #da prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1,
 #a nota da prova 2, a média das notas e uma das mensagens: "Aprovado",
 #"Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
 #reprovação e as demais em prova final).
+def q13():
+     nome = input('Nome: ')
+     nota1 = float(input('Nota da prova 1:'))
+     nota2 = float(input('Nota da prova 2:'))
+     media = (nota1 + nota2)/2
+     if (media >= 7):
+         print (f'Aprovado com média {media}.')
+     elif (7 > media >= 3):
+         print (f'Média: {media}. \nProva final.')
+     else:
+         print (f'Média {media}. \nReprovado.')
 
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
 #desconto do INSS segundo a tabela seguir:
@@ -129,6 +193,16 @@ def q11():
 #Maior que R$600,00 e menor ou igual a R$1200,00 20%
 #Maior que R$1200,00 e menor ou igual a R$2000,00 25%
 #Maior que R$2000,00 30%
+def q14():
+     salario = float(input('Insira o salário em R$: '))
+     if (salario <= 600):
+         print(f'Salário: {salario}. \nDesconto INSS: Isento.')
+     elif (600 < salario <= 1200):
+         print (f'Salário: {salario}. \nDesconto INSS: 20%.')
+     elif (1200 < salario <= 2000):
+         print (f'Salário: {salario}. \nDesconto INSS: 25%.')
+     else:
+         print (f'Salário: {salario}. \nDesconto INSS: 30%.')
 
 #15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o
 #valor da compra for menor que R$20,00, caso contrário, o lucro será de 30%.

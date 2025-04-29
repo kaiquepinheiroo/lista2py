@@ -207,6 +207,13 @@ def q14():
 #15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o
 #valor da compra for menor que R$20,00, caso contrário, o lucro será de 30%.
 #Faça um programa que leia o valor do produto e imprima o valor da venda.
+def q15():
+    custo = float(input('Insira custo do produto: R$'))
+    if (custo < 20):
+        print(f'{custo} + 45% = {custo + (custo*0.45)}')
+    else:
+        print(f'{custo} + 30% = {custo + (custo*0.30)}')
+
 
 #16. A confederação brasileira de natação irá promover eliminatórias para o
 #próximo mundial. Faça um programa que receba a idade de um nadador e imprima
@@ -217,6 +224,20 @@ def q14():
 #Juvenil A 11 - 13 anos
 #Juvenil B 14 - 17 anos
 #Sênior maiores de 18 anos
+def q16():
+    idade = int(input('Insira a idade: '))
+    if ( 5 <= idade <= 7):
+        print (f'Categoria: Infantil A.')
+    elif ( 8 <= idade <= 10):
+        print (f'Categoria: Infantil B.')
+    elif ( 11 <= idade <= 13):
+        print (f'Categoria: Juvenil A.')
+    elif ( 14 <= idade <= 17):
+        print (f'Categoria: Juvenil B.')
+    elif ( 18 <= idade):
+        print (f'Categoria: Sênior.')
+    else: 
+        print (f'Não compete.')
 
 #17. Depois da liberação do governo para as mensalidades dos planos de saúde,
 #as pessoas começaram a fazer pesquisas para descobrir um bom plano, não
